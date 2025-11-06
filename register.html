@@ -3,70 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-card register-card">
-            <h1>Register</h1>
-            <form action="server.html" method="get" target="result_frame">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="username">Username:</label>
+    <div class="main-container">
+        <div class="auth-card register-mode">
+            <h1>Create Account</h1>
+            <form action="server.html" method="post" target="result_frame">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="username">Username *</label>
                         <input type="text" id="username" name="username" required>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="firstname">First Name:</label>
+                    <div class="input-group">
+                        <label for="firstname">First Name *</label>
                         <input type="text" id="firstname" name="firstname" required>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="lastname">Last Name:</label>
+                    <div class="input-group">
+                        <label for="lastname">Last Name *</label>
                         <input type="text" id="lastname" name="lastname" required>
                     </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">Email:</label>
+                <div class="input-group">
+                    <label for="email">Email Address *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
-                <div class="form-group">
-                    <label for="confirm_email">Confirm Email:</label>
+                <div class="input-group">
+                    <label for="confirm_email">Confirm Email *</label>
                     <input type="email" id="confirm_email" name="confirm_email" required>
                 </div>
                 
-                <div class="form-group">
-                    <label for="password">Password:</label>
+                <div class="input-group">
+                    <label for="password">Password *</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 
-                <div class="form-group">
-                    <label>Gender:</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
+                <div class="input-group">
+                    <label>Gender *</label>
+                    <div class="gender-options">
+                        <label class="radio-item">
                             <input type="radio" name="gender" value="male" required>
-                            Male
+                            <span>Male</span>
                         </label>
-                        <label class="radio-label">
+                        <label class="radio-item">
                             <input type="radio" name="gender" value="female" required>
-                            Female
+                            <span>Female</span>
                         </label>
                     </div>
                 </div>
                 
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="btn-primary">Complete Registration</button>
                 
-                <p class="form-footer">
-                    Already have an account? <a href="login.html">Login here</a>
+                <p class="auth-footer">
+                    Already have an account? <a href="index.html">Sign in here</a>
                 </p>
             </form>
             
-            <div class="instructions-section">
-                <h2>Instructions</h2>
-                <iframe src="instructions.html" name="result_frame" title="Instructions"></iframe>
+            <div class="help-section">
+                <h2>Registration Help</h2>
+                <iframe src="instructions.html" name="result_frame" title="Registration Instructions and Results"></iframe>
             </div>
         </div>
     </div>
