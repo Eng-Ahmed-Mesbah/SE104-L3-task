@@ -1,84 +1,31 @@
-# Login & Registration System
+# Student Login & Registration System
 
-A simple HTML forms project with login and registration pages.
+This is my submission for the SE104 HTML forms assignment. It demonstrates a basic frontend authentication flow.
 
-## Project Structure
+## Project Files
 
-```
-project/
-├── login.html          # Login page with username and password
-├── register.html       # Registration page with detailed form
-├── server.html         # Success/thank you page
-├── instructions.html   # Instructions page (shown in iframe)
-├── styles.css          # Stylesheet for all pages
-└── readme.md          # This file
-```
+- `index.html` - Main entry point (Login page)
+- `register.html` - User registration form
+- `server.html` - Mock success page (acts as form submission target)
+- `instructions.html` - Helper text loaded into an iframe
+- `styles.css` - Main stylesheet
 
-## Features
+## Key Features
 
-### Login Page (`login.html`)
-- Username input field
-- Password input field
-- Submit button
-- Link to registration page
+### Login (index.html)
+- Simple username/password auth form
+- Links to registration if user has no account
 
-### Registration Page (`register.html`)
-- Three text fields for name (Username, First Name, Last Name)
-- Email field
-- Email confirmation field
-- Password field
-- Gender selection (Radio buttons: Male/Female)
-- Instructions section displayed in iframe
-- Submit button sends data to `server.html` which displays in the same iframe
+### Registration (register.html)
+- Full data collection form (Name, Email, Gender, etc.)
+- Includes an iframe at the bottom that displays the server response after submit
 
-### Instructions Page (`instructions.html`)
-- Displayed in iframe below the registration form
-- Contains guidelines for filling the form
-- Privacy notice
+## Setup & Running
 
-### Server Page (`server.html`)
-- Displays success message after form submission
-- Shown in iframe on registration page
-- Link to return to login page
+1. Clone or download this repo.
+2. Open `index.html` in Chrome, Firefox, or Edge.
+3. No local server needed, it runs directly in the browser.
 
-## How to Use
-
-1. Download all files to your computer
-2. Keep all files in the same folder
-3. Open `login.html` in your web browser to start
-4. Or open `register.html` to go directly to registration
-
-## Form Methods
-
-- **Login form**: Uses GET method (for demonstration)
-- **Registration form**: Uses POST method and displays result in iframe
-
-## Technologies Used
-
-- HTML5
-- CSS3 (with gradients and modern styling)
-- No JavaScript required (pure HTML/CSS)
-
-## Browser Compatibility
-
-Works on all modern browsers:
-- Chrome
-- Firefox
-- Safari
-- Edge
-
-## Notes
-
-- All form fields are required
-- Email validation is handled by HTML5 `type="email"`
-- Password fields use `type="password"` for security
-- Radio buttons require selection before submission
-- Forms use iframe target to display results
-
-## License
-
-Free to use for educational purposes.
-
----
-
-Created for SE104 Course Assignment
+## Notes for Grader
+- **Important:** Forms use `method="GET"` for maximum compatibility with static hosting environments (like viewing directly from disk or basic live servers) where `POST` requests might be blocked.
+- I used `target="result_frame"` on the registration form so the success message loads in the iframe without navigating away from the main page.
